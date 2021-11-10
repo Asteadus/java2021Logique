@@ -1,0 +1,22 @@
+Début plusGrand
+	Début variables locales
+		var premierTexte :T <- ""
+		var deuxiemeTexte :T <- ""
+		var asciLettre1 :N	<- 0
+		var asciLettre2 :N <- 0
+		var positon :N <- 0
+	Fin variables locales
+	
+	tant que  asciLettre1=asciLettre2 
+		asciLettre1 <- asci(carac(premierTexte, position))
+		asciLettre2 <- asci(carac(deuxiemeTexte, position))
+		position <- position +1
+		
+	fin tant que
+	Si asciLettre1>asciLettre2
+			Alors
+			Afficher "Vrai"
+			
+		Sinon asciLettre2 < asciLettre1
+			Afficher "Faux"
+Fin plusGrand

@@ -1,0 +1,34 @@
+Début rechercheRemplacer	
+	Début variables locales
+		var texteSource :T <- ""
+		var texteRecherche :T <- ""
+		var texteRemplacement :T <- ""
+		var position :N <-0
+		var texteFinal :T <- ""
+		var textBegin :T <-""
+		var textEnd:T <-"" 
+	Fin variables locales
+	
+	afficher "Entrer un texte source"
+	Saisir texteSource
+		
+	afficher "Entrer un texte a recherché"
+	Saisir texteRecherche
+	
+	afficher "Entrer un texte a recherché"
+	Saisir texteRemplacement
+	
+	Pour position allant de position (longueur(texteSource)-1)
+	
+		Si texteRecherche = sousChaine(texte, position, position+(longueur(texteRecherche))
+			textBegin<-souschaine(textSource,0,position)
+			textEnd <- sousChaine(textSource,position,position+tailleTextRech)
+			textSource <- textBegin + textRemplace + textEnd
+		
+	position suivant
+	
+	Afficher "Le nouveau texte est : " texteFinal
+
+Fin rechercheRemplacer
+
+

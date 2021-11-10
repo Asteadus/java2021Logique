@@ -1,0 +1,26 @@
+Debut sommeSuite
+    VARIABLES LOCALES : 
+        VAR val1 :N <- 0
+        VAR val2 :N <- 0
+        VAR somme :N <- 0
+        VAR cpt :N <- 0
+    FIN VARIABLES LOCALES
+
+    Afficher "Entrez deux valeurs pour la calculer la suite totale"
+    Afficher "Valeur 1 : "
+    Saisir val1
+
+    Afficher "Valeur 2 : "
+    Saisir val2
+
+    SI val1 <val2
+	ALORS
+		POUR cpt ALLANT DE val1 A val2
+			somme <- somme + cpt
+		cpt SUIVANT
+	SINON
+        Afficher " Le premier nombre doit être plus grand que le second"
+    FINSI
+    
+    Afficher "La somme des nombres compris entre ", val1, " et ", val2, " vaut ", somme
+Fin sommeSuite

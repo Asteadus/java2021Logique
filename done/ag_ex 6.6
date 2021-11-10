@@ -1,0 +1,19 @@
+Début inversionCaractere
+	Début variables locales
+		var texte:T <- ""
+		var texteInverse:T <- ""
+		var tailleTexte:N <- 0
+		
+	Fin variables locales
+	
+	tailleTexte<-longueur(texte)
+	
+	Tant que tailleTexte>=0;
+	
+		texteInverse <- texteInverse + caract(texte, tailleTexte)
+		tailleTexte <- tailleTexte -1
+	Fin tant que
+	
+	Afficher texteInverse
+	
+Fin inversionCaractere

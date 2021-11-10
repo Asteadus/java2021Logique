@@ -1,0 +1,38 @@
+Debut rechercheCaractere
+
+	Debut variables locales
+		var texteSource :T <- ""
+		var texteRecherche :T <- ""
+		var premierePosition :N <- 0
+		var dernierePosition :N <-0
+		var nbOccurence :N <-0
+		var position :N <-0
+	Fin variables locales
+	
+	afficher "Entrer un texte source"
+	Saisir texteSource
+		
+	afficher "Entrer un texte a recherché"
+	Saisir texteRecherche
+	
+	Pour position allant de position à (longueur(texteSource)-1)
+	
+	Si texteRecherche = sousChaine(texte, position, position+(longueur(texteRecherche))
+	Alors
+		Si nbOccurence = 0
+			Alors
+			premierePosition <- position
+			
+		Fin si
+		dernierePosition <- position
+		nbOccurence <- nbOccurence +1
+	Fin si
+	position suivant
+	
+	Si nbOccurence > 0
+		Afficher " La premiere position du caractère est : " + premierePosition + 1  + " la dernierePosition est : " + dernierePosition + 1 + " le nombre d'occurence est de " + nbOccurence
+	Sinon
+		Afficher "Le caractère n'est pas dans le texte"
+	Fin Si
+	
+Fin rechercheCaractere

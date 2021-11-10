@@ -1,0 +1,23 @@
+Debut MoyenneIntervalle
+
+	debut variables locales
+		var nb:N <-0
+		var nombreSaisie:N <-0
+		var accuMoyenne:N <-0
+		var moyenne:N <-0
+	Fin variables locales
+	
+	Pour cpt allant de 1 à 30
+	
+		Afficher "Entrer un nombre pour la moyenne"
+		Saisir nb
+		
+		Si nb<=20 et nb>=10
+			accuMoyenne <- accuMoyenne + nb
+			nombreSaisie <- nombreSaisie
+		Fin si
+		
+	CPT SUIVANT
+	
+	moyenne <- accuMoyenne / nombreSaisie
+	Afficher "La moyenne est de: " + moyenne

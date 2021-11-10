@@ -1,0 +1,25 @@
+Début rechercheRemplacer	
+	Début variables locales
+		var texteSource :T <- ""
+		var posDepart :N <- 0
+		var posFin :N <- 0
+		var position:N <- 0
+		chaineCaractere: T <- ""
+	Fin variables locales
+	
+	Afficher "Saisir un texte"
+	saisir texteSource
+	Afficher "Position départ"
+	saisir posDepart
+	Afficher "Position fin"
+	saisir posFin
+	
+	SI posDepart > posFin ou posDepar > (longueur(texteSource)-1)
+	Afficher "Mauvaise donnée"
+		
+	Pour posDepart allant de posDepart à posFin
+		chaineCaractere <- chaineCaractere + caract(texteSource, posDepart)
+	posDepart suivant
+	
+	Afficher chaineCaractere
+Fin rechercheRemplacer

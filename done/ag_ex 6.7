@@ -1,0 +1,23 @@
+Début inversionMot
+	Début variables locales
+		var texte:T <- ""
+		var texteFinal:T <- ""
+		var mot:T <- ""
+		var position:N <- 0
+	Fin variables locales
+	
+	tailleTexte<-longueur(texte)
+	
+	Tant que position < tailleTexte;
+		Si caract (texte, position) = " "
+			Alors 
+				texteFinal <- mot+ " " + texteFinal 
+				mot <- ""
+		Sinon
+			mot <- mot + caract(texte, position)
+		
+	Fin tant que
+	
+	Afficher texteInverse
+	
+Fin inversionMot
