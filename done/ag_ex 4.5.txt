@@ -1,0 +1,30 @@
+4.5	Factorielle
+---------------
+
+Ecrire le programme qui permet de calculer la factorielle d'un nombre entré au clavier.
+
+-------------------------------------------------------------------------------------------
+
+Solution
+--------
+      
+
+Debut factorielle
+
+    Variables locales
+	var factorielleEntree : N <-0
+	var factorielle : N <- 1
+	var resultat : N <- 0 
+    Fin variables locales
+
+    Afficher "Entrer la factorielle que vous voulez calculez "
+	Saisir factorielle
+	factorielleEntree <- factorielle
+	resultat <- factorielle
+
+    Tant que factiorielle>1
+	factorielle <- factorielle - 1
+	resultat <- resultat * factorielle
+    Fin tant que
+    Afficher "La factorielle est de " factorielleEntree "!:" resultat
+Fin factiorielle
