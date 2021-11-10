@@ -1,0 +1,86 @@
+4.3	Min max
+-----------
+
+Ecrire le programme qui calcule la plus grande et la plus petite valeur d'une série de nombres entrés au clavier.
+
+  •  La fin de la série sera annoncée par un 100. 
+  •  Le programme affichera également :
+     o  le plus grand;
+     o  le plus petit des nombres;
+     o  la position du premier maximum (optionnel);
+     o  la position du dernier maximum (optionnel);
+     o  le nombre d'occurrence du maximum (optionnel);
+     o  Idem pour le minimum (optionnel).
+
+-------------------------------------------------------------------------------------------
+
+Solution
+--------
+
+Debut min max
+  Debut variables locales
+	var nbPlusGrand:N <-0
+	var nbPlusPetit:N <-0
+	var positionPremierMax:N <-0
+	var positionDernierMax:N <-0
+	var nbOccurenceMax:N <-0
+	var nbOccurenceMin:N <-0
+	var nb:N <-0
+	var nbSaisie:N <-0
+  Fin variables locales
+
+Afficher "Entrer un nombre"
+Saisir nb 
+nbSaisie: <-nbSaisie+1
+nbPlusPetit <- nb
+nbPlusGrand <- nb
+nbOccurenceMin = 1
+nbOccurenceMax = 1
+positionPremierMax:N <-nbSaisie 
+
+
+Tant que (nb != 100)
+Afficher "Entrer un nombre"
+Saisir nb 	
+Si nbSaisie>1 et nb != 100
+	nbSaisie:N <-nbSaisie +1	
+	Si nb<nbPlusPetit
+  	alors
+		nbPlusPetit <- nb
+		nbOccurenceMin = 1
+	Finsi
+
+	Si nb=nbPlusPetit
+		nbOccurenceMin<-nbOccurenceMin +1
+	
+	Finsi
+
+	Si nb>nbPlusGrand
+  	alors
+		nbPlusGrand <- nb
+		nbOccurenceMax = 1
+		positionPremierMax:N <-nbSaisie 
+	Finsi
+
+	Si nb=nbPlusGrand
+		nbOccurenceMin<-nbOccurenceMax +1
+		positionDernierMax:N <-nbSaisie 
+
+	Finsi
+
+
+Finsi
+	
+Afficher "Le nombre le plus grand" nbPlusGrand
+
+Afficher "Le nombre le plus petit" nbPlusPetit
+
+Afficher "Le position du premier maximum" PositionPremierMax
+
+Afficher "Le position du dernier maximum" PositionDernierMax
+
+Afficher "Le nombre d'occurence du maximum" nbOccurenceMax
+
+Afficher "Le nombre d'occurence du minimum" nbOccurenceMin
+
+fin min max
