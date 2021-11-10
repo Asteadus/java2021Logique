@@ -9,4 +9,18 @@ Si la valeur est différente, un nouveau choix sera demandé.
 
 Solution
 --------
-       
+Debut validation
+   Debut variables locales
+	var choix :N <- 0;
+   Fin variables locales
+
+	Afficher ('Entrez un nombre entre 0 et 4')
+	Saisir choix
+
+	Tant que (choix<0 ou choix>4)
+		Afficher ('Nombre incorrect (compris entre 0 et 4)')
+		Saisir choix
+	fin tant que
+
+	Afficher choix 
+Fin validation
