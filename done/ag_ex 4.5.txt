@@ -21,7 +21,10 @@ Debut factorielle
 	Saisir factorielle
 	factorielleEntree <- factorielle
 	resultat <- factorielle
-
+    Si factorielle < 1
+	Alors 
+	     Afficher "La factiorielle n'existe pas"
+    Fin si	
     Tant que factiorielle>1
 	factorielle <- factorielle - 1
 	resultat <- resultat * factorielle

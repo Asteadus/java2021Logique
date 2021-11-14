@@ -1,0 +1,127 @@
+4.4	Min max de luxe
+-------------------
+
+Ecrire le programme qui calcule la plus grande et la plus petite suite croissante de valeurs d'une série de nombres entrés au clavier.
+
+  •  La fin de la série sera annoncée par un 100. 
+  •  Le programme affichera également :
+     o  la position du premier maximum;
+     o  la position du dernier maximum;
+     o  le nombre d'occurrence du maximum;
+
+-------------------------------------------------------------------------------------------
+
+Solution
+--------
+       
+Debut minMaxLuxe
+
+	variables locales
+		saisie :N <-0
+		nbMin :N <-0
+		nbMax :N <-0
+		DerniereSaisie :N <- 0
+		posPremMax :N <-0
+		posDernMax :N <-0
+		nbOccurenceMax :N <-0
+		posPremierMin :N <-0
+		posDernierMin :N <-0
+		NbOccurenceMin :N <-0
+		compteurSaisie :N <-0
+		compteurSuite :N <-0
+		compteurSuiteMin :N <- 0
+		compteurSuiteMax :N <- 1
+	fin variables locales
+
+	Afficher "Saisir un nombre pour la suite"
+	Saisir saisie
+	nbMin <- saisie
+	nbMax <- saisie
+	derniereSaisie <- saisie
+	compteurSaisie <- compteurSaisie+1
+	posPremMax :N <- saisie
+	posDernMax :N <- saisie
+	nbOccurenceMax :N <- nbOccurenceMax+1
+	posPremierMin :N <- compteurSaisie
+	posDernierMin :N <- compteurSaisie
+	nbOccurenceMin :N <- nbOccurenceMin+1
+	compteurSuite :N <- compteurSuite +1
+	
+	Tant que saisir != 100 et compteurSaisie > 1
+		derniereSaisie <-saisie
+		Afficher "Saisir un nombre pour la suite"
+		Saisir saisie
+		compteurSaisie <- compteurSaisie + 1
+		
+		Si saisie > derniereSaisie
+			Alors
+				compteurSuite <-compteurSuite+1
+				Si saisie = max
+					Alors 
+						nbOccurenceMax <- nbOccurenceMax+1
+						posDernierMax <- compteurSaisie
+					Sinon
+						nbOccurenceMax <- 1
+						posPremierMax <- compteurSaisie
+						nbMax <- saisie
+
+		Sinon saisie < derniereSaisie
+			Alors
+			Si compteurSuite < compteurSuiteMin ou compteurSuiteMin = 0
+				Alors
+					compteurSuiteMin <- compteurSuite
+					compteurSuite = 1
+				Sinon compteurSuite > compteurSuiteMax
+					Alors
+						compteurSuiteMax = compteurSuite 
+			FinSi
+			compteurSuite <- 1
+			Si nbMin < saisie
+				Alors
+					nbMin <- saisie
+					posPremierMin <- compteurSaisie
+					nbOccurenceMin <- 1 
+				
+			Si nbMin = saisie
+				Alors 
+					posDernierMin <- compteurSaisie
+					nbOccurenceMin <- nbOccurenceMin + 1
+								
+			
+		Sinon saisie = derniereSaisie	
+			Si saisie = nbMax
+				Alors 
+					nbOccurenceMax <- nbOccurenceMax+1
+					posDernierMax <- compteurSaisie
+			Fin si
+			Si saisie = nbMin
+				Alors 
+					nbOccurenceMin <- nbOccurenceMin+1
+					posDernierMin <- compteurSaisie
+			Fin si
+			Si compteurSuite < compteurSuiteMin ou compteurSuiteMin = 0
+				Alors
+					compteurSuiteMin <- compteurSuite
+					compteurSuite = 1
+				Sinon compteurSuite > compteurSuiteMax
+					Alors
+						compteurSuiteMax = compteurSuite 
+						compteurSuite = 1
+			FinSi
+			compteurSuite <- 1
+
+		Fin si
+		
+		Afficher "Plus grande suite est de:" + compteurSuiteMax + "éléments"
+		Afficher "Plus petite suite est de:" + compteurSuiteMin + "éléments"
+		Afficher "La position du premier maximum est:" + positionPremierMax
+		Afficher "La position du dernier maximum est:" + positionDernierMax
+		Afficher "Le nombre d'occurrences du maximum est de :" + nbOccurenceMax
+		Afficher "La position du premier minimum est:" + positionPremierMin
+		Afficher "La position du dernier minimum est:" + positionDernierMin
+		Afficher "Le nombre d'occurrences du minimum est de :" + nbOccurenceMin
+	
+		
+	Fin tant que
+
+Fin minMaxLuxe
