@@ -1,0 +1,17 @@
+Début inversionVecteur
+    Début variables locales
+        CONST taille:N <- 10
+        var tabNombres:[taille]
+        var ind:N <- 0
+        var nbPermuter:N <- 0
+    fin variables locales
+
+POUR ind Allant de 0 à taille-1
+        nbPermuter <- tabNombres[taille-(ind+1)]
+        tabNombres[taille-(ind+1)]<-tabNombres[ind]
+        tabNombres[ind]<-nbPermuter
+
+ind suivant
+
+Afficher tabNombres
+fin inversionVecteur

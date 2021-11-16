@@ -1,0 +1,41 @@
+Début minMaxVecteur
+    Début variables locales
+        CONST taille:N <- 20
+        var tabNombres:[taille]
+        var valeur:N <-0
+        var valeurMin:N <- 0
+        var valeurMax:N <- 0
+        var posMin:N <- 0
+        var posMax:N <- 0
+        var ind:N <- 0
+    fin variables locales
+
+    POUR ind Allant de 0 à taille-1
+        Afficher "Entrer une valeur"
+        Saisir valeur
+        tabNombres[ind] <- valeur
+    ind suivant
+
+    min <- tabNombres[0]
+    posMin <- 0
+    max <- tabNombres[0]
+    posMax <- 0
+    ind <-1
+    pour ind Allant de 1 à taille-1
+
+        Si tabNombres[ind]>max
+            Alors 
+                tabNombres[ind] <- max
+                posMax <- ind
+                
+        Sinon tabNombres[ind]<min 
+            Alors tabNombres[ind] <- min
+            posMin <- ind
+    ind suivant
+
+
+    Afficher "La valeur la plus petite est: " + valeurMin + " sa position est " + posMin
+    Afficher "La valeur la plus grande est: " + valeurMax + " sa position est " + posMax
+
+
+Fin minMaxVecteur

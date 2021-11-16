@@ -1,0 +1,21 @@
+Début sommeDesSuivants
+    Début variables locales
+        CONST taille:N <- 10
+        var tabNb:[taille]
+        var ind:N <-0
+        var sommeTotale <-0
+        var sommeAvant <-0
+    Fin variables locales
+
+    POUR ind Allant de 0 à taille-1
+        sommeTotale <- somme + tabNb[ind]
+    ind suivant
+
+    ind <- 0
+    POUR ind Allant de 0 à taille-1
+        tabNb[ind] <- sommeTotale - sommeAvant
+        sommeAvant = sommeAvant + tabNb[ind]
+    ind suivant
+
+
+Fin sommeDesSuivants

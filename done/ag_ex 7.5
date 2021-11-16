@@ -1,0 +1,31 @@
+Début supprimerEspaces
+    Début variables locales
+        CONST taille:N <- 20
+        var tabTexte:[taille]
+        var ind:N <- 0
+        var nbPermuter:N <- 0
+        var posEspace:N <-0
+        var nbEspace:N <-0
+        var posTexte:N <- 0
+        var nbTexte:N <-0
+    Fin variables locales
+
+    POUR ind Allant de 0 à taille-1
+        Si tabTexte[ind] != " "
+            Alors
+                posTexte <- ind
+                nbTexte <- nbTexte +1
+                tabTexte[nbTexte]<-tabTexte[ind]
+        Si tabTexte[ind] = " " 
+            Alors
+                nbEspace <- nbEspace + 1
+    ind suivant
+    
+    ind <- 0
+    Pour ind allant de 0 à nbEspace
+
+        tabTexte[nbTexte+1 + ind] = " "
+    ind suivant
+
+    Afficher tabTexte
+Fin supprimerEspaces

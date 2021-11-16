@@ -1,0 +1,14 @@
+Début vecteurX2
+    Début variables locales
+        CONST taille:N <- 16
+        var tabNombres:[taille]
+        var ind:N <- 0
+    fin variables locales
+
+tabNombes[ind]<-1
+POUR ind Allant de 1 à taille-1
+        tabNombres[ind] <- tabNombres[ind-1]*2
+ind suivant
+
+Afficher tabNombres
+fin vecteurX2

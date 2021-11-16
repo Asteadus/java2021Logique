@@ -1,0 +1,22 @@
+Début copiePlusOuMoins
+    Début variables locales
+        CONST taille:N <- 20
+        var tabA:[taille]
+        var tabB:[taille]
+        var tabC:[taille]
+        var ind:N <-0
+    Fin variables locales
+
+    POUR ind Allant de 0 à taille-1
+        Si tabB == true 
+            Alors
+                tabC[ind] <- tabA[ind]
+        sinon 
+            tabC[ind] <- -(tabA[ind])
+    ind suivant
+
+    Afficher tabA
+    Afficher tabB
+    Afficher tabC
+
+Fin copiePlusOuMoins
