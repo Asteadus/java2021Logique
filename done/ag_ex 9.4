@@ -1,0 +1,20 @@
+Début carréMagique
+    Début variables locales
+        CONST taille:N <- 4
+        var tab2D:[taille][taille]
+        var sommeLigne:N <- 0
+        var sommeColonne:N <- 0
+        var sommeDiagonale:N <- 0
+    Fin variables locales
+
+    Pour y allant 0 à taille-1
+        Pour x allant de 0 à taille -1
+            sommeLigne <- sommeLigne + tab2D[x][y]
+        x suivant
+        sommeColonne <- sommeColonne + tab2D[x][y]
+        Si x=y
+            Alors
+            sommeDiagonale <- sommeDiagonale + tab2D[x][y]
+        Fin si
+    y suivant
+Fin carréMagique

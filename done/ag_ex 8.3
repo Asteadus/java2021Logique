@@ -1,0 +1,24 @@
+Début nombreParfaits
+
+    Début variables locales
+        var nb:N <-0
+        var diviseur:N <-0
+        var somme:N <-0
+
+        
+    Fin variables locales
+
+    POUR nb allant de 0 à 100
+        pour diviseur allant de 0 à nb
+            si nb % diviseur = 0
+                somme = somme + diviseur
+            fin si
+        diviseur suivant
+        si somme = nb
+            Alors 
+                afficher nb
+        fin si
+    nb suivant
+
+
+Fin nombreParfaits

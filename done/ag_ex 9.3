@@ -1,0 +1,31 @@
+Début moyenneMinMax
+    Début variables locales
+        CONST taille:N <- 4
+        var tab2D:[taille][taille]
+        var min:N <- 0
+        var max:N <- 0
+        var moyenne:N <- 0
+        var additionMoyenne:N <- 0
+        var position:N <- 0
+    Fin variables locales
+
+    Pour y allant 0 à taille-1
+    min <- tab2D[y][0]
+    max <- tab2D[y][0]
+        Pour x allant de 0 à taille -1
+            additionMoyenne<-additionMoyenne + 
+            Si min> tab2D[x][y]
+                Alors
+                    min <- tab2D[x][y]
+            Sinon 
+                Si max < tab2D[x][y]
+                    ALors max <- tab2D[x][y]
+            Fin si
+        x suivant
+        moyenne = additionMoyenne/taille
+        afficher "La moyenne de la ligne" + y + " est de :" + moyenne
+        afficher "La minimum de la ligne" + y + " est de :" + min
+        afficher "La maximum de la ligne" + y + " est de :" + max
+        additionMoyenne <- 0
+    y suivant
+Fin moyenneMinMax

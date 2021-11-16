@@ -1,0 +1,17 @@
+Début diagonalesTableauCarré
+    Début variables locales
+        CONST taille:N <- 4
+        var tabNb:[taille][taille]
+        var x:N <- 0
+        var y:N <-0
+    Fin variables locales
+
+
+    Pour y allant 0 à taille-1
+        Pour x allant de 0 à taille -1
+            tab[x][y] <- 1
+            tab[x][y+(taille-y)] <- 2  
+        x suivant
+    y suivant
+
+fin diagonalesTableauCarré

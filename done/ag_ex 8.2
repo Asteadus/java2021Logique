@@ -1,0 +1,23 @@
+Début compteurDigital
+
+    Début variables locales
+        var unite:N <-0
+        var dizaine:N <-0
+        var centaine:N <-0
+        
+    Fin variables locales
+  
+    Pour unite allant de 0 à 10
+        Si unite == 10
+            Alors
+                dizaine <- dizaine + 1
+                    Si dizaine == 10
+                        Alors centaine <- centaine +1
+                        dizaine <- 0
+                    fin Si
+            unite <- 0
+        fin si
+        afficher centaine + dizaine + unite
+    unite suivant
+
+Fin compteurDigital

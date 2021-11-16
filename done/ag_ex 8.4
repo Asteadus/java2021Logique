@@ -1,0 +1,23 @@
+Début nombreParfaits
+
+    Début variables locales
+        var nb:N <-0
+        var diviseur:N <-0
+        var somme:N <-0
+        var premier: B <- true
+    Fin variables locales
+
+    POUR nb allant de 0 à 100
+        pour diviseur allant de 0 à nb/2 
+            si nb % diviseur != 0
+                premier <- true
+            fin si
+
+        diviseur suivant
+        si premier = true
+            Alors
+              afficher nb
+        fin si
+
+    nb suivant
+Fin nombreParfaits
