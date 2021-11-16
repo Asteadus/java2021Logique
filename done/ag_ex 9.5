@@ -2,29 +2,16 @@ Début carréMagique
     Début variables locales
         CONST taille:N <- 4
         var tab2D:[taille][taille]
-        var tableauIntermdiaire:[taille][taille]
+        var tabFinal:[taille][taille]
+        var temp:T <-""
+    
     Fin variables locales
 
-     Pour y allant 0 à taille-1
-        Pour x allant de 0 à taille -1
-            
-        x suivant
-    y suivant
-    afficher tableauIntermdiaire
+     Pour x allant 0 à taille
+        Pour y allant de 0 à taille-1
+            tabFinal[y][taille-y-1] = tab[x][y];
+        y suivant
+    x suivant
+    afficher tabFinal
 Fin rotationMatriceCarre
 
-abc
-def
-ghi
-
-gda 
-heb 
-ifc
-
-00 01 02
-10 11 12
-20 21 22
-
-20 10 00
-21 11 01
-22 12 02

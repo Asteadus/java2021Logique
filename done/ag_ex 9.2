@@ -6,13 +6,11 @@ Début copieTableau
         var position:N <- 0
     Fin variables locales
 
-
     Pour x allant 0 à taille-1
         Pour y allant de 0 à taille -1
-            tab1D<-[x][y]
+            tab1D[position]<-[x][y]
             position +1
         y suivant
-
     x suivant
     Afficher tab1D
 Fin copieTableau
