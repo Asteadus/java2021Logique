@@ -12,9 +12,12 @@ Début carréMagique
             sommeLigne <- sommeLigne + tab2D[x][y]
         y suivant
         sommeColonne <- sommeColonne + tab2D[x][y]
-        Si x=y
+        Si x=y ou x=0 et y=taille-1 ou x=taille-1 et y = 0
             Alors
             sommeDiagonale <- sommeDiagonale + tab2D[x][y]
         Fin si
     x suivant
+    Si sommeLigne = sommeColonne = sommeDiagonale
+        ALors
+            afficher "Carré Magique !"
 Fin carréMagique
